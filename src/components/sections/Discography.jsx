@@ -71,10 +71,10 @@ function Entry(props) {
 
   return (
     <Typography pl={1} pb={1} >
-      <Grid container alignItems='center'>
-        <Grid item>{name} <Feature {...props} /> ({year}) {access}</Grid>
-        <Grid item>{children}</Grid>
-      </Grid>
+      <Box component="span" sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+        <Box component="span">{name} <Feature {...props} /> ({year}) {access}</Box>
+        <Box component="span">{children}</Box>
+      </Box>
     </Typography>
   );
 }
