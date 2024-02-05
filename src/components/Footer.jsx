@@ -23,7 +23,7 @@ export function Footer() {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   return (<Grid item>
-    <Paper elevation='10' square>
+    <Paper elevation={10} square>
     <Styled isSmall={isSmall}>
       <Typography>&copy;Phil Norman 2024</Typography>
       <Typography>Email: <Link href="mailto:rockstarphil@gmail.com">rockstarphil@gmail.com</Link></Typography>

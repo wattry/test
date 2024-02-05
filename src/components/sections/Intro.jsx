@@ -23,13 +23,13 @@ export function Intro() {
           <Typography paragraph align="left" >
             Hey, kind friends,
           </Typography>
-          <Typography paragraph align="left">
+          <Typography paragraph align="justify">
             Folksinger is my first solo album since “Collision” in 2000. In the meantime, my wife and I have raised our kids, I’ve had the good fortune to be in several bands and make albums with great friends, and I’ve done so many gigs that it felt like a relief during the COVID lockdown when I stepped back from performing.
           </Typography>
-          <Typography paragraph align="left">
+          <Typography paragraph align="justify">
             I haven’t felt the call to get back on stage more regularly, but I’ve still been writing songs. Mostly I sing them on my couch, but I sure love those chances to share songs together around campfires and on porches with friends.
           </Typography>
-          <Typography paragraph align="left">
+          <Typography paragraph align="justify">
             These are the songs that have kept me company for the last few years. I hope these songs might keep you company, too.
           </Typography>
           <Typography align="left">
