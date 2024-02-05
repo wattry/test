@@ -26,9 +26,7 @@ export function Layout() {
       <Discography />
       <Fawm />
       <OtherPhils />
-      <Grid item>
-        <Instagram />
-      </Grid>
+      <Instagram />
       <Footer />
     </Grid>
   );

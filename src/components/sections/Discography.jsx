@@ -98,7 +98,6 @@ export function Discography(props) {
         <AppleMusic album='new-mountain-music' id="76842729" />
       </Entry>
       <Entry name="Blue Moonshine" feature="Distilled EP" year='2011'>
-        <Spotify albumId="431629884" />
         <AppleMusic album="distilled-ep" id="431629884" />
         <Bandcamp band="bluemoonshine" album="distilled" />
       </Entry>
