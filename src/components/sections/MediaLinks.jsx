@@ -1,5 +1,10 @@
 import { Link, Grid, useMediaQuery } from '@mui/material';
 
+const spotify = new URL('/logos/Spotify_logo_with_text.svg', import.meta.url);
+const apple = new URL('/logos/AppleMusic_2019.svg', import.meta.url);
+const bandcamp = new URL('/logos/Bandcamp-logotype-color.svg', import.meta.url);
+const instagram = new URL('/logos/Instagram-logo-black-white-horizontal-png.png', import.meta.url);
+
 function MediaLink(props) {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
@@ -14,6 +19,7 @@ function MediaLink(props) {
 }
 
 export function MediaLinks() {
+  console.log('spotify', spotify);
   return (
     <Grid item paddingTop={1}>
       <Grid
@@ -24,21 +30,20 @@ export function MediaLinks() {
         justifyContent="center"
       >
         <MediaLink
-          src="/logos/Spotify_logo_with_text.svg" 
+          src={spotify.href}
           href={'https://open.spotify.com/album/0kxzzUsHz7RZBYBMjy3Bbt?si=1YCbkgBYQP-NVk9kTT'}
-          
           />
         <MediaLink
-          src="/logos/AppleMusic_2019.svg"
+          src={apple.href}
           href="https://music.apple.com/us/album/folksinger/1727566434"
         />
         <MediaLink
-          src="/logos/Bandcamp-logotype-color.svg"
+          src={bandcamp.href}
           href="https://rockstarphil.bandcamp.com/album/folksinger"
         />
         <MediaLink
           style={{ maxHeight: '2rem' }}
-          src="/logos/Instagram-logo-black-white-horizontal-png.png"
+          src={instagram.href}
           href="https://www.instagram.com/rockstarphil/"
         />
       </Grid>

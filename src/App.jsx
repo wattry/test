@@ -10,6 +10,7 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import { Layout } from './components/Layout';
 
 function App() {
+  console.log( 'cunt',import.meta.url)
   const theme = createTheme({
     palette: {
       primary: {

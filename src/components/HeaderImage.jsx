@@ -5,6 +5,8 @@ import {
 } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+const phil = new URL('/Phil-widewebcrop.jpg', import.meta.url);
+
 export function HeaderImage() {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
@@ -19,7 +21,7 @@ export function HeaderImage() {
         maxWidth: '1920px',
         maxHeight: '800px'
       }}
-      src="/Phil-widewebcrop.jpg" />
+      src={phil.href} />
     <div style={{
       position: 'absolute',
       top: isSmall ? '4.5rem' : '10rem',
