@@ -8,16 +8,8 @@ import { styled } from '@mui/material/styles';
 const Styled = styled(function BandCampPlayer(props) {
   const {
     baseUrl = 'https://bandcamp.com/EmbeddedPlayer',
-    children,
-    album,
     className,
-    options = {
-      size: "large",
-      bgco: "ffffff",
-      linkco: "333333",
-      artwork: "small",
-      transparent: "true",
-    }
+    ...rest
   } = props;
   const [path, setPath] = useState();
 
@@ -25,25 +17,28 @@ const Styled = styled(function BandCampPlayer(props) {
     if (!path) {
       const arr = [];
 
-      for (const [key, value] of Object.entries(options)) {
+      for (const [key, value] of Object.entries(rest)) {
         arr.push([`${key}=${value}`]);
       }
 
-      setPath(`${baseUrl}/album=${album}/${arr.join('/') }`);
+      setPath(`${baseUrl}/${arr.join('/') }`);
     }
-  }, []);
+  }, [rest]);
 
   return (<Suspense >
     <iframe
     className={className}
     src={path}
     seamless
+    frameBorder="0"
   >
     <Link href="https://rockstarphil.bandcamp.com/album/folksinger">Folksinger by Phil Norman</Link>
     </iframe>
   </Suspense>);
 }, { name: 'RSP-bandcamp-player' })({
-  border: '0', width: '350px', height: '470px'
+  border: '0',
+  width: '100%',
+  height: '360px'
 });
 
 export { Styled as BandCampPlayer };
