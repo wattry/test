@@ -19,7 +19,6 @@ function MediaLink(props) {
 }
 
 export function MediaLinks() {
-  console.log('spotify', spotify);
   return (
     <Grid item paddingTop={1}>
       <Grid

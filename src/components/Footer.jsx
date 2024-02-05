@@ -1,4 +1,10 @@
-import { Typography, Link, Grid, useMediaQuery } from '@mui/material';
+import {
+  Typography,
+  Link,
+  Grid,
+  useMediaQuery,
+  Paper
+} from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 const Styled = styled('div', { name: 'rspFooter' })(({ isSmall }) => {
@@ -17,6 +23,7 @@ export function Footer() {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   return (<Grid item>
+    <Paper elevation='10' square>
     <Styled isSmall={isSmall}>
       <Typography>&copy;Phil Norman 2024</Typography>
       <Typography>Email: <Link href="mailto:rockstarphil@gmail.com">rockstarphil@gmail.com</Link></Typography>
@@ -27,6 +34,7 @@ export function Footer() {
         you on my road.
       </Typography>
     </Styled>
+    </Paper>
   </Grid>);
 }
 
